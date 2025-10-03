@@ -78,4 +78,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Performance optimizations (SIMD, better hashing)
 - WebAssembly support
 
-[0.1.0]: https://github.com/yourusername/nano-hyperloglog/releases/tag/v0.1.0
+[0.1.0]: https://github.com/aovestdipaperino/nano-hyperloglog/releases/tag/v0.1.0

@@ -2,7 +2,7 @@
 
 [![Crates.io](https://img.shields.io/crates/v/nano-hyperloglog.svg)](https://crates.io/crates/nano-hyperloglog)
 [![Documentation](https://docs.rs/nano-hyperloglog/badge.svg)](https://docs.rs/nano-hyperloglog)
-[![License](https://img.shields.io/crates/l/nano-hyperloglog.svg)](https://github.com/yourusername/nano-hyperloglog#license)
+[![License](https://img.shields.io/crates/l/nano-hyperloglog.svg)](https://github.com/aovestdipaperino/nano-hyperloglog#license)
 
 A high-performance HyperLogLog implementation in Rust for cardinality estimation with pluggable storage backends.
 

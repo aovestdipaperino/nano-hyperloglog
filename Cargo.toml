@@ -2,11 +2,11 @@
 name = "nano-hyperloglog"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["aovestdipaperino"]
 description = "A Redis-compatible HyperLogLog service with pluggable storage backends"
 documentation = "https://docs.rs/nano-hyperloglog"
-homepage = "https://github.com/yourusername/nano-hyperloglog"
-repository = "https://github.com/yourusername/nano-hyperloglog"
+homepage = "https://github.com/aovestdipaperino/nano-hyperloglog"
+repository = "https://github.com/aovestdipaperino/nano-hyperloglog"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 keywords = ["hyperloglog", "cardinality", "probabilistic", "redis", "analytics"]
