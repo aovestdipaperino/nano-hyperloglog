@@ -1,0 +1,58 @@
+[package]
+name = "nano-hyperloglog"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A Redis-compatible HyperLogLog service with pluggable storage backends"
+documentation = "https://docs.rs/nano-hyperloglog"
+homepage = "https://github.com/yourusername/nano-hyperloglog"
+repository = "https://github.com/yourusername/nano-hyperloglog"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["hyperloglog", "cardinality", "probabilistic", "redis", "analytics"]
+categories = ["algorithms", "data-structures", "web-programming"]
+
+[dependencies]
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+
+# Hashing
+twox-hash = "1.6"
+
+# Async traits
+async-trait = "0.1"
+
+# Async runtime (for storage)
+tokio = { version = "1", features = ["fs", "io-util"], optional = true }
+
+# Web framework (optional, for server)
+axum = { version = "0.7", optional = true }
+
+# Storage backends (optional)
+elasticsearch = { version = "9.1.0-alpha.1", optional = true }
+
+# Logging (optional, for server)
+tracing = { version = "0.1", optional = true }
+tracing-subscriber = { version = "0.3", features = ["env-filter"], optional = true }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }
+anyhow = "1.0"
+axum = "0.7"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[features]
+default = ["file-storage"]
+file-storage = ["tokio"]
+elasticsearch-storage = ["elasticsearch", "tokio"]
+server = ["axum", "tracing", "tracing-subscriber", "tokio/full", "file-storage"]
+full = ["file-storage", "elasticsearch-storage", "server"]
+
+[lib]
+name = "hyperloglog"
+path = "src/lib.rs"
