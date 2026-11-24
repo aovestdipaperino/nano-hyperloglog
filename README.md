@@ -156,6 +156,9 @@ cargo run --example server --features server
 
 ```bash
 # Add elements (PFADD)
+
+[![GitHub stars](https://img.shields.io/github/stars/aovestdipaperino/nano-hyperloglog?logo=github&color=brightgreen)](https://github.com/aovestdipaperino/nano-hyperloglog/stargazers)
+
 curl -X POST http://localhost:3000/pfadd/daily_visitors \
   -H "Content-Type: application/json" \
   -d '{"elements": ["user123", "user456", "user789"]}'
